@@ -1,0 +1,60 @@
+{
+  "name": "export-data",
+  "version": "0.0.0",
+  "description": "Export your data easily with custom formatting.",
+  "strapi": {
+    "name": "export-data",
+    "description": "Export your data easily with custom formatting.",
+    "kind": "plugin",
+    "displayName": "export-data"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thetribeio/strapi-plugin-export.git"
+  },
+  "dependencies": {
+    "@strapi/design-system": "^1.6.3",
+    "@strapi/helper-plugin": "^4.6.0",
+    "@strapi/icons": "^1.6.3",
+    "export-to-csv": "^0.2.1",
+    "prop-types": "^15.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/eslint-parser": "^7.21.8",
+    "eslint": "^8.41.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.6"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.3.4",
+    "styled-components": "^5.3.6"
+  },
+  "author": {
+    "name": "theTribe",
+    "email": "hello@theTribe.io",
+    "url": "https://thetribe.io"
+  },
+  "maintainers": [
+    {
+      "name": "theTribe",
+      "email": "hello@theTribe.io",
+      "url": "https://thetribe.io"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "lint": "eslint ./ --ext js"
+  },
+  "license": "MIT"
+}

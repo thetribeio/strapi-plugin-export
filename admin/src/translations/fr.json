@@ -1,0 +1,12 @@
+{
+  "ExportPage.header.title":"Exporter vos données",
+  "ExportPage.header.subtitle":"Exporter vos données en une pression de bouton",
+  "ExportPage.tab.collection-type-title" : "Collection types",
+  "ExportPage.tab.single-type-title" : "Single types",
+  "ExportPage.tab-panel.column-name" : "Nom",
+  "ExportPage.info.no-collection-types": "Vous n'avez pas encore de collection-types...",
+  "ExportPage.info.no-single-types": "Vous n'avez pas encore de single-types...",
+  "ExportPage.info.create-collection-type": "Créez votre première collection-type",
+  "ExportPage.info.create-single-type": "Créez votre première single-type",
+  "ExportPage.export_verb":"Exporter"
+}
