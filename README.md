@@ -39,5 +39,5 @@ Clone the repository :<br>
 **With HTTPS** :<br>
 `https://github.com/thetribeio/strapi-plugin-export.git` <br>
 Create a `config/plugins.js` file in the strapi project directory. <br>
-Run `yarn && yarn build` in the strapi-plugin-export directory. <br>
+Run `yarn && yarn build` in the strapi directory. <br>
 Run `yarn develop` or `yarn develop --watch-admin` in the strapi directory <br>
