@@ -9,8 +9,7 @@ import { EmptyStateLayout } from '@strapi/design-system/EmptyStateLayout';
 import { Table, Thead, Tbody, Tr, Td, Th } from '@strapi/design-system/Table';
 import { useIntl } from 'react-intl';
 import getTrad from '../../../utils/getTrad';
-import {exportContentType} from '../../../utils/api';
-import getFile from '../../../utils/getFile';
+import useExportContentType from '../../../hooks/useExportContentType';
 
 import Plus from '@strapi/icons/Plus';
 
@@ -32,11 +31,8 @@ const ContentTypesTable = () => {}
 const Main = ({ contentTypes }) => {
 
   const { formatMessage } = useIntl();
+  const {exportContentType} = useExportContentType();
 
-  const handleExportClick = async(name)=>{
-    const response = await exportContentType(name);
-    getFile(name,response)
-  }
   return (
     <>
       <Box padding={8}>
@@ -90,7 +86,7 @@ const Main = ({ contentTypes }) => {
                         </Td>
                         <Td>
                           <Flex justifyContent="right" alignItems="right">
-                            <Button onClick={() => handleExportClick(item.uid)}>{formatMessage({
+                            <Button onClick={() => exportContentType(item.uid)}>{formatMessage({
                               id:getTrad('ExportData.export_verb'),
                               defaultMessage : 'Export'
                             })}</Button>
@@ -155,7 +151,7 @@ const Main = ({ contentTypes }) => {
                         </Td>
                         <Td>
                           <Flex justifyContent="right" alignItems="right">
-                            <Button onClick={() => handleExportClick(item.uid)}>
+                            <Button onClick={() => exportContentType(item.uid)}>
                               {formatMessage({
                                 id:getTrad('ExportData.export_verb'),
                                 defaultMessage : 'Export'
