@@ -1,0 +1,19 @@
+{
+  "plugins": ["react-hooks"],
+  "extends": "@thetribe/eslint-config-react",
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension" : "off",
+    "import/no-unresolved": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021
+  },
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "browser": true,
+    "node": true
+  }
+}

@@ -1,3 +1,5 @@
+const exportData = require('./exportData');
+
 module.exports = {
-  exportData: require('./exportData'),
+    exportData,
 };

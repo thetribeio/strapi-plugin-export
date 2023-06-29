@@ -4,39 +4,34 @@
  *
  */
 
-import React, {useState, useEffect, useRef} from 'react';
-import {Box} from '@strapi/design-system/Box';
-import {
-  LoadingIndicatorPage,
-  // ContentBox,
-  // useAutoReloadOverlayBlocker,
-} from '@strapi/helper-plugin';
+import { LoadingIndicatorPage } from '@strapi/helper-plugin';
+import { useEffect, useRef, useState } from 'react';
 import Header from '../../components/HomePage/Header/header';
 import Info from '../../components/HomePage/Main/info';
-// import PropTypes from 'prop-types';
-import pluginId from '../../pluginId';
-import {fetchContentTypes} from "../../utils/api";
+import { fetchContentTypes } from '../../utils/api';
 
 const HomePage = () => {
+    const [isLoading, setIsLoading] = useState(true);
+    const contentTypes = useRef({});
 
-  const [isLoading, setIsLoading] = useState(true);
-  const contentTypes = useRef({});
+    useEffect(() => {
+        const loadContentTypes = async () => {
+            contentTypes.current = await fetchContentTypes();
+            setIsLoading(false);
+        };
+        loadContentTypes();
+    }, []);
 
-  useEffect(async () => {
-    contentTypes.current = await fetchContentTypes();
-    setIsLoading(false);
-  }, []);
+    if (isLoading) {
+        return <LoadingIndicatorPage />;
+    }
 
-  if (isLoading) {
-    return <LoadingIndicatorPage />;
-  }
-
-  return (
-    <>
-      <Header />
-      <Info contentTypes={contentTypes.current}></Info>
-    </>
-  );
+    return (
+        <>
+            <Header />
+            <Info contentTypes={contentTypes.current} />
+        </>
+    );
 };
 
 export default HomePage;
