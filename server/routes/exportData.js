@@ -1,6 +1,6 @@
 module.exports = {
     // accessible only from admin UI
-    // type: 'admin',
+    type: 'admin',
     routes: [
         {
             method: 'GET',
