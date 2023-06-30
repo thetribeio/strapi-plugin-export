@@ -5,7 +5,13 @@
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-filename-extension" : "off",
-    "import/no-unresolved": "off"
+    "import/no-unresolved": "off",
+    "react/jsx-uses-react": "error",
+    "react/react-in-jsx-scope": "error",
+    "max-len": ["warn",
+      {
+        "ignorePattern": "d=\"([\\s\\S]*?)\""
+      }]
   },
   "parserOptions": {
     "ecmaVersion": 2021

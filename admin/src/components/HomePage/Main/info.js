@@ -9,6 +9,7 @@ import { Typography } from '@strapi/design-system/Typography';
 import Plus from '@strapi/icons/Plus';
 import _ from 'lodash';
 import { array } from 'prop-types';
+import React from 'react';
 import { useIntl } from 'react-intl';
 import useExportContentType from '../../../hooks/useExportContentType';
 import getTrad from '../../../utils/getTrad';

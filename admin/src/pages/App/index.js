@@ -6,6 +6,7 @@
  */
 
 import { AnErrorOccurred } from '@strapi/helper-plugin';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import pluginId from '../../pluginId';
 import HomePage from '../HomePage';

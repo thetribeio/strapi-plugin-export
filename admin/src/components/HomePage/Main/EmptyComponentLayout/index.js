@@ -1,5 +1,6 @@
 import { Box } from '@strapi/design-system/Box';
 import { EmptyStateLayout } from '@strapi/design-system/EmptyStateLayout';
+import React from 'react';
 import { useIntl } from 'react-intl';
 import getTrad from '../../../../utils/getTrad';
 import Illo from './illo';

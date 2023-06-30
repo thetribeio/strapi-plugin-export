@@ -1,6 +1,7 @@
 import { Button } from '@strapi/design-system/Button';
 import { CheckPermissions } from '@strapi/helper-plugin';
 import Download from '@strapi/icons/Download';
+import React from 'react';
 import { useIntl } from 'react-intl';
 import useContentTypeSlug from '../../hooks/useContentTypeSlug';
 import useExportContentType from '../../hooks/useExportContentType';

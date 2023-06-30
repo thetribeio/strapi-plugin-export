@@ -5,7 +5,7 @@
  */
 
 import { LoadingIndicatorPage } from '@strapi/helper-plugin';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Header from '../../components/HomePage/Header/header';
 import Info from '../../components/HomePage/Main/info';
 import { fetchContentTypes } from '../../utils/api';

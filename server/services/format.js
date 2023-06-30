@@ -10,12 +10,9 @@ module.exports = ({ strapi }) => ({
             return entries;
         }
         entries.forEach((entry) => {
-            if (customFormats) {
-                const transformations = getTransformations(entry, customFormats);
-                transformations.forEach((column) => (
-                    { ...entry, [column]: customFormats[column](entry[column]) }
-                ));
-            }
+            getTransformations(entry, customFormats).forEach((column) => (
+                { ...entry, [column]: customFormats[column](entry[column]) }
+            ));
         });
 
         return entries;
