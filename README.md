@@ -24,9 +24,9 @@ In the `config/plugins.js` file you can add this kind of formatting:
 ```
 ## Roadmap 🚧
 
- - [ ] Export entries in collection-types view
- - [ ] Use list view filters in exported data like created_at range, order by, etc.
- - [ ] Add permissions & roles
+ - [x] Export entries in collection-types view
+ - [x] Use list view filters in exported data like created_at range, order by, etc.
+ - [x] Add permissions & roles
 
 ## How to contribute 🚀
 [Create a new projet with Strapi](https://docs.strapi.io/dev-docs/quick-start#step-1-run-the-installation-script) : 

@@ -1,6 +1,6 @@
 module.exports = {
     // accessible only from admin UI
-    // type: 'admin',
+    type: 'admin',
     routes: [
         {
             method: 'GET',
@@ -11,7 +11,7 @@ module.exports = {
             },
         }, {
             method: 'GET',
-            path: '/export/:contentType',
+            path: '/export',
             handler: 'exportData.exportContentType',
             config: {
                 policies: [],

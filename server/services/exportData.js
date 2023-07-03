@@ -26,19 +26,21 @@ module.exports = ({ strapi }) => ({
         return { collectionTypes, singleTypes } || null;
     },
 
-    async getEntries(contentTypeUid) {
+    async getEntries(contentTypeUid, parameters) {
         const contentType = strapi.contentTypes[contentTypeUid];
         if (contentType.kind === 'collectionType') {
-            return strapi.entityService.findMany(`${contentTypeUid}`);
+            return strapi.entityService.findMany(`${contentTypeUid}`, parameters);
         }
-        const singleTypes = await strapi.entityService.findMany(`${contentTypeUid}`);
+        const singleTypes = await strapi.entityService.findMany(`${contentTypeUid}`, parameters);
 
         return [singleTypes];
     },
 
-    async exportContentType(ctx, contentTypeUid) {
-        const entries = await this.getEntries(contentTypeUid);
-        const formatedEntries = strapi.plugin('export-data').service('format').process(contentTypeUid, entries);
+    async exportContentType(ctx) {
+        const contentType = ctx.query['content-type'];
+        const { filters, sort } = ctx.query;
+        const entries = await this.getEntries(contentType, { filters: filters || {}, sort: sort || {} });
+        const formatedEntries = strapi.plugin('export-data').service('format').process(contentType, entries);
 
         const exportOptions = {
             fieldSeparator: ',',

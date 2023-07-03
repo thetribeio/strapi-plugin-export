@@ -19,6 +19,7 @@
     "axios": "^1.4.0",
     "export-to-csv": "^0.2.1",
     "prop-types": "^15.7.2",
+    "qs": "^6.11.2",
     "react-intl": "^6.4.3"
   },
   "devDependencies": {
