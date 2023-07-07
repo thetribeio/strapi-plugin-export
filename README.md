@@ -1,3 +1,4 @@
+[![Publish to NPM](https://github.com/thetribeio/strapi-plugin-export/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/thetribeio/strapi-plugin-export/actions/workflows/publish.yml)
 
 # Strapi plugin export data
 A plugin that allows to export collection-types and single-types with the option to provide specific formatting for the fields.
