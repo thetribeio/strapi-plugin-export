@@ -1,5 +1,5 @@
 {
-  "name": "@thetribe/strapi-plugin-export",
+  "name": "@thetribelille/strapi-plugin-export",
   "version": "1.0.0",
   "description": "Export your strapi's data in csv easily with custom formatting.",
   "license": "MIT",
