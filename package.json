@@ -1,16 +1,45 @@
 {
-  "name": "export-data",
-  "version": "0.0.0",
-  "description": "Export your data easily with custom formatting.",
+  "name": "strapi-plugin-export",
+  "version": "1.0.0",
+  "description": "Export your strapi's data in csv easily with custom formatting.",
+  "license": "MIT",
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "strapi-v4",
+    "plugin",
+    "export",
+    "csv"
+  ],
   "strapi": {
     "name": "export-data",
-    "description": "Export your data easily with custom formatting.",
+    "required": false,
+    "description": "Export your strapi's data in csv easily with custom formatting.",
     "kind": "plugin",
-    "displayName": "export-data"
+    "displayName": "Export Data"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/thetribeio/strapi-plugin-export.git"
+  },
+  "bugs": {
+    "url" : "https://github.com/thetribeio/strapi-plugin-export/issues",
+    "email" : "project@hostname.com"
+  },
+  "author": {
+    "name": "theTribe",
+    "email": "hello-lille@theTribe.io",
+    "url": "https://thetribe.io"
+  },
+  "maintainers": [
+    {
+      "name": "theTribe",
+      "email": "tma-lille@theTribe.io",
+      "url": "https://thetribe.io"
+    }
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.3",
@@ -46,24 +75,11 @@
     "strapi": "^3.6.11",
     "styled-components": "^5.3.6"
   },
-  "author": {
-    "name": "theTribe",
-    "email": "hello@theTribe.io",
-    "url": "https://thetribe.io"
-  },
-  "maintainers": [
-    {
-      "name": "theTribe",
-      "email": "hello@theTribe.io",
-      "url": "https://thetribe.io"
-    }
-  ],
   "engines": {
     "node": ">=14.19.1 <=18.x.x",
     "npm": ">=6.0.0"
   },
   "scripts": {
     "lint": "eslint . --ext js"
-  },
-  "license": "MIT"
+  }
 }
