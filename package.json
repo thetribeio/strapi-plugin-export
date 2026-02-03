@@ -55,7 +55,7 @@
     "@babel/core": "^7.21.8",
     "@babel/eslint-parser": "^7.21.8",
     "@thetribe/eslint-config-react": "^0.6.1",
-    "eslint": "^8.41.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
